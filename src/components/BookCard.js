@@ -28,11 +28,11 @@ const BookCard = (props) => {
         <div className="book-shelf-changer">
           <select
             onChange={(e) => handleChange(e.target.value, book)}
-            value={bookShelf}
+            value={bookShelf || "none"}
           >
             {isSearching && (
               <option value="none" disabled>
-                Add to...
+                None
               </option>
             )}
             {!isSearching && (
